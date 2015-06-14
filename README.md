@@ -66,15 +66,6 @@ var myOwnModule require('./my_own_module');
 var moment = require('moment');
 ```
 
-#### Unit tests
-
-electron-boilerplate has preconfigured [jasmine](http://jasmine.github.io/2.0/introduction.html) unit test runner. To run it go with standard:
-```
-npm test
-```
-You don't have to declare paths to spec files in any particular place. The runner will search through the project for all `*.spec.js` files and include them automatically.
-
-
 # Making a release
 
 **Note:** There are various icon and bitmap files in `resources` directory. Those are used in installers and are intended to be replaced by your own graphics.

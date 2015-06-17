@@ -33,7 +33,7 @@ var packageBuiltApp = function() {
     var deferred = Q.defer();
 
     asar.createPackage(projectDir.path('build'),
-                       readyAppDir.path('resources/src.asar'),
+                       readyAppDir.path('resources/app.asar'),
                        function() {
                            deferred.resolve();
                        });

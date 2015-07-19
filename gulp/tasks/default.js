@@ -15,4 +15,5 @@ var runApp = function() {
     });
 };
 
-gulp.task('default', ['build', 'watch'], runApp);
+// TODO get watch working.
+gulp.task('default', ['build'], runApp);

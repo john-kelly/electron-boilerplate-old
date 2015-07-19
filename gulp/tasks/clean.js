@@ -3,6 +3,7 @@ var jetpack = require('fs-jetpack');
 
 var dest = require('../config').dest;
 
+// TODO phase out jetpack.
 var projectDir = jetpack;
 var destDir = projectDir.cwd(dest);
 

@@ -29,6 +29,10 @@ var copyRuntime = function() {
                                  {overwrite: true});
 };
 
+var cleanupRuntime = function() {
+    return readyAppDir.removeAsync('resources/default_app');
+}
+
 var packageBuiltApp = function() {
     var deferred = Q.defer();
 
@@ -62,6 +66,10 @@ var finalize = function() {
 
     return deferred.promise;
 };
+
+var renameApp = function() {
+    return readyAppDir.renameAsync('electron.exe', manifest.productName + '.exe');
+}
 
 var createInstaller = function() {
     var deferred = Q.defer();
@@ -116,8 +124,10 @@ var cleanClutter = function() {
 module.exports = function() {
     return init()
     .then(copyRuntime)
+    .then(cleanupRuntime)
     .then(packageBuiltApp)
     .then(finalize)
+    .then(renameApp)
     .then(createInstaller)
     .then(cleanClutter);
 };

@@ -13,11 +13,10 @@ module.exports = {
     dist: dist,
 
     toCopy: [
-        'src/**/*.js',
-        'src/node_modules/**',
-        'src/bower_components/**',
-        'src/vendor/**',
-        'src/**/*.html'
+        'src/**',
+        '!src/stylesheets/**',
+        // NOTE Not sure why this has to be relative.
+        '../node_modules/**'
     ],
 
     less: {

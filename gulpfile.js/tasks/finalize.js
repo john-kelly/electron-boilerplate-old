@@ -11,9 +11,10 @@ var projectDir = jetpack;
 
 var destDir = projectDir.cwd(dest);
 var srcDir = projectDir.cwd(src);
+var currentDir = projectDir.cwd('.');
 
 gulp.task('finalize', ['clean'], function() {
-    var manifest = srcDir.read('package.json', 'json');
+    var manifest = currentDir.read('package.json', 'json');
     switch (utils.getEnvName()) {
         case 'development':
             // Add "dev" suffix to name, so Electron will write all

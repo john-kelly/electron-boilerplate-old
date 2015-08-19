@@ -13,6 +13,8 @@ gulp.task('release', ['build'], function() {
         version: utils.getElectronVersion(),
         all: true,
         out: config.dist,
-        overwrite: true
+        overwrite: true,
+        // removes devDependencies!
+        prune: true
     }, function(){});
 });

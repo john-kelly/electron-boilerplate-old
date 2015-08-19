@@ -1,12 +1,10 @@
 var gulp = require('gulp');
-var jetpack = require('fs-jetpack');
+var del = require('del');
 
-var dest = require('../config').dest;
+var config = require('../config');
 
-// TODO phase out jetpack.
-var projectDir = jetpack;
-var destDir = projectDir.cwd(dest);
-
-gulp.task('clean', function(callback) {
-    return destDir.dirAsync('.', {empty: true});
+gulp.task('clean', function(cb) {
+    del([
+        config.dest,
+    ], cb);
 });

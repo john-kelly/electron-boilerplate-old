@@ -5,7 +5,7 @@ var jetpack = require('fs-jetpack');
 
 var dest = require('../config').dest;
 var src = require('../config').src;
-var utils = require('../utils/utils');
+var utils = require('../utils');
 
 var projectDir = jetpack;
 

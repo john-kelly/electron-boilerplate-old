@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var packager = require('electron-packager')
 
 var config = require('../config');
-var utils = require('../utils/utils');
+var utils = require('../utils');
 
 gulp.task('release', ['build'], function() {
     packager({

@@ -9,7 +9,7 @@
 // var gulp = require('gulp');
 // var jetpack = require('fs-jetpack');
 //
-// var utils = require('../utils/utils');
+// var utils = require('../utils');
 //
 // gulp.task('npm-install-src', function() {
 //     var electronVersion = utils.getElectronVersion();

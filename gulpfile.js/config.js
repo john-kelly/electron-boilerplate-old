@@ -1,13 +1,20 @@
 'use strict';
 
+var dist = './dist';
 var dest = './build';
 var src = './src';
+
+var packageJson = require('../package.json');
+
+console.log(packageJson);
 
 module.exports = {
 
     dest: dest,
 
     src: src,
+
+    dist: dist,
 
     toCopy: [
         'src/**/*.js',

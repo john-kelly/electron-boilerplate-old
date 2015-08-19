@@ -4,5 +4,5 @@ bower_components
 .DS_Store
 Thumbs.db
 /build/
-/releases/
+/dist/
 /tmp/

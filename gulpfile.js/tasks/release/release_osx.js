@@ -4,7 +4,7 @@ var asar = require('asar');
 var gulpUtil = require('gulp-util');
 var jetpack = require('fs-jetpack');
 var Q = require('q');
-var utils = require('../utils/utils');
+var utils = require('../../utils/utils');
 
 var projectDir;
 var releasesDir;
